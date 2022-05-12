@@ -6,25 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map Project</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
-    <script src="./test.js"></script>
+    <script src="app.js" defer></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
     <style>
-        #map {
-            height: 600px;
-        } 
+        #map {height: 600px}
     </style>
 </head>
 <body>
-    <fieldset>
-        <label for="destination">Choose a Business</label>
-        <select id="destination">
-            <option value="coffee">Coffee Shop</option>
-            <option value="hotel">Hotel</option>
-            <option value="grocery">Market</option>
-            <option value="restaurant" selected>Restaurant</option>
+    <form>
+        <select id="business">
+            <option value="coffee">Coffee Shops</option>
+            <option value="hotel">Hotels</option>
+            <option value="market">Markets</option>
+            <option value="restaurant">Restaurants</option>
         </select>
-        <button id="search">Search</button>
-    </fieldset>
-    <div id="map">Loading...</div>
+        <button id="submit">Submit</button>
+    </form>
+    <div id="map">
+        <p>Loading...</p>
+    </div>
 </body>
 </html>
